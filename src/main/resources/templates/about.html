@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sobre Nosotros - Fashion Store</title>
+</head>
+<body>
+    <div th:replace="~{layout :: layout('Sobre Nosotros', ~{::section})}">
+        <section class="about">
+            <div class="about-content">
+                <h1>Nuestra Historia</h1>
+                <p>Somos una tienda de moda comprometida con ofrecer las últimas tendencias y la mejor calidad a nuestros clientes.</p>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <i class="fas fa-tshirt"></i>
+                        <h3>Calidad Premium</h3>
+                        <p>Trabajamos con los mejores materiales y proveedores.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-truck"></i>
+                        <h3>Envío Rápido</h3>
+                        <p>Entrega a todo el país en 24-48 horas.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Atención Personalizada</h3>
+                        <p>Equipo dedicado a tu satisfacción.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Chat Bot - Fashion Store</title>
+</head>
+<body>
+    <div th:replace="~{layout :: layout('Chat Bot', ~{::section})}">
+        <section class="chat">
+            <div class="chat-container">
+                <div class="chat-messages">
+                    <div class="message bot">
+                        ¡Hola! Soy el asistente virtual de Fashion Store. ¿En qué puedo ayudarte?
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Escribe tu mensaje...">
+                    <button class="btn">Enviar</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

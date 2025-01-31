@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Catálogo - Fashion Store</title>
+</head>
+<body>
+    <div th:replace="~{layout :: layout('Catálogo', ~{::section})}">
+        <section class="catalog">
+            <div class="catalog-filters">
+                <h2>Filtros</h2>
+                <div class="filter-group">
+                    <h3>Categorías</h3>
+                    <label><input type="checkbox"> Camisas</label>
+                    <label><input type="checkbox"> Pantalones</label>
+                    <label><input type="checkbox"> Vestidos</label>
+                    <label><input type="checkbox"> Accesorios</label>
+                </div>
+                <div class="filter-group">
+                    <h3>Precio</h3>
+                    <input type="range" min="0" max="200" value="100">
+                    <div class="price-range">$0 - $200</div>
+                </div>
+            </div>
+            <div class="product-grid">
+                <!-- Productos de ejemplo -->
+                <div class="product-card" th:each="i : ${#numbers.sequence(1, 9)}">
+                    <img src="/api/placeholder/300/400" th:alt="'Producto ' + ${i}">
+                    <h3 th:text="'Producto ' + ${i}">Producto</h3>
+                    <p th:text="'$' + ${49.99 + i * 10}">$49.99</p>
+                    <button class="btn">Añadir al Carrito</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
